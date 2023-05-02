@@ -1,7 +1,7 @@
 "use strict";
 const events = require("events");
 const EventEmitter = events.EventEmitter || events;
-const SerialPort = require("serialport").SerialPort;
+// const SerialPort = require("serialport").SerialPort;
 const modbusSerialDebug = require("debug")("modbus-serial");
 
 /* TODO: const should be set once, maybe */
@@ -74,7 +74,7 @@ class RTUBufferedPort extends EventEmitter {
         this._length = 0;
 
         // create the SerialPort
-        this._client = new SerialPort(Object.assign({}, { path }, options));
+        // this._client = new SerialPort(Object.assign({}, { path }, options));
 
         // attach an error listner on the SerialPort object
         this._client.on("error", function(error) {

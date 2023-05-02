@@ -17,7 +17,7 @@
 const events = require("events");
 const EventEmitter = events.EventEmitter || events;
 const modbusSerialDebug = require("debug")("modbus-serial");
-const { SerialPort } = require("serialport");
+// const { SerialPort } = require("serialport");
 const ServerSerialPipeHandler = require("./serverserial_pipe_handler");
 
 const PORT = "/dev/tty";
@@ -236,7 +236,7 @@ class ServerSerial extends EventEmitter {
         const optionsWithBindingandSerialport = Object.assign({}, serialportOptions, optionsWithBinding);
 
         // create a serial server
-        modbus._serverPath = new SerialPort(optionsWithBindingandSerialport);
+        // modbus._serverPath = new SerialPort(optionsWithBindingandSerialport);
 
         // create a serial server with a timeout parser
         modbus._server = modbus._serverPath.pipe(new ServerSerialPipeHandler(optionsWithSerialPortTimeoutParser));

@@ -79,8 +79,8 @@ const addConnctionAPI = function(Modbus) {
         options.platformOptions = { vmin: MIN_MODBUSRTU_FRAMESZ, vtime: 0 };
 
         // create the SerialPort
-        const SerialPort = require("serialport").SerialPort;
-        this._port = new SerialPort(Object.assign({}, { path }, options));
+        // const SerialPort = require("serialport").SerialPort;
+        // this._port = new SerialPort(Object.assign({}, { path }, options));
 
         // open and call next
         return open(this, next);
@@ -339,8 +339,8 @@ const addConnctionAPI = function(Modbus) {
         }
 
         // create the SerialPort
-        const SerialPort = require("../ports/rtubufferedport");
-        this._port = new SerialPort(path, options);
+        // const SerialPort = require("../ports/rtubufferedport");
+        // this._port = new SerialPort(path, options);
 
         // set vmin to smallest modbus packet size
         options.platformOptions = { vmin: MIN_MODBUSRTU_FRAMESZ, vtime: 0 };
@@ -369,8 +369,8 @@ const addConnctionAPI = function(Modbus) {
         }
 
         // create the ASCII SerialPort
-        const SerialPortAscii = require("../ports/asciiport");
-        this._port = new SerialPortAscii(path, options);
+        // const SerialPortAscii = require("../ports/asciiport");
+        // this._port = new SerialPortAscii(path, options);
 
         // open and call next
         return open(this, next);
