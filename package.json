@@ -40,6 +40,6 @@
     "webbluetooth": "^2.1.0"
   },
   "dependencies": {
-    "debug": "^4.1.1",
+    "debug": "^4.1.1"
   }
 }
